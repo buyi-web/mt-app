@@ -58,12 +58,12 @@
                         <dd v-for="(movie, index) in movies" :key="index">
                             <router-link :to="{path: '/'}">{{movie}}</router-link>
                         </dd>
-                        
+
                     </dl>
                     <dl class="app">
                         <dt>手机应用</dt>
                         <dd>
-                            <img class="appicon" src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/appicons/meituan.png" title="美团app" alt="美团app">   
+                            <img class="appicon" src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/appicons/meituan.png" title="美团app" alt="美团app">
                         </dd>
                         <dd>
                             <img class="appicon" src="//s1.meituan.net/bs/fe-web-meituan/404d350/img/appicons/waimai.png" title="外卖app" alt="外卖app">
@@ -86,13 +86,12 @@
 
 <script>
 export default {
-    data(){
-        return {
-            hotals: ["国际机票","火车票","民宿","经济型酒店","主题酒店","商务酒店","公寓","豪华酒店","青年旅社","度假酒店","别墅","农家院"],
-            foods: ["烤鱼","特色小吃","火锅","自助餐","烧烤","代金券"],
-            movies: ["热映电影","热门影院","热映电影口碑榜","最受期待电影","国内票房榜","北美票房榜","电影排行榜"]
-        }
+  data () {
+    return {
+      hotals: ['国际机票', '火车票', '民宿', '经济型酒店', '主题酒店', '商务酒店', '公寓', '豪华酒店', '青年旅社', '度假酒店', '别墅', '农家院'],
+      foods: ['烤鱼', '特色小吃', '火锅', '自助餐', '烧烤', '代金券'],
+      movies: ['热映电影', '热门影院', '热映电影口碑榜', '最受期待电影', '国内票房榜', '北美票房榜', '电影排行榜']
     }
+  }
 }
 </script>
-

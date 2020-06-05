@@ -13,13 +13,9 @@
 import geo from './geo.vue'
 import mtNav from './nav.vue'
 export default {
-    components:{
-        geo,
-        mtNav
-    }
+  components: {
+    geo,
+    mtNav
+  }
 }
 </script>
-
-<style lang="scss">
- @import "@/assets/css/public/header/topbar.scss";
-</style>

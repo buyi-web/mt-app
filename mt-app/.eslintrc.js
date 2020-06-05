@@ -18,7 +18,7 @@ module.exports = {
   // required to lint *.vue files
   // 下载eslint-plugin-vuefix 自动修改
   plugins: [
-    'vue'
+    'vuefix'
   ],
   // add your custom rules here
   rules: {

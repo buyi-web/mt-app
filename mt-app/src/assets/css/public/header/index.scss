@@ -1,5 +1,4 @@
-@import "./topbar.scss";
-@import "./search.scss";
+
 .m-header{
   @at-root .layout-default{
     .el-header{
@@ -19,6 +18,7 @@
     background: #fff;
     .search-panel{
       width: 1190px;
+      height: 157px;
       margin: 0 auto;
     }
   }
@@ -29,3 +29,5 @@
     text-decoration: none;
   }
 }
+@import "./topbar.scss";
+@import "./search.scss";
