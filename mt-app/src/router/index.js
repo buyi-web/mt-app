@@ -19,6 +19,11 @@ export default new Router({
           path: 'index',
           name: 'index',
           component: Index
+        },
+        {
+          path: 'changeCity',
+          name: 'changeCity',
+          component: () => import('@/page/changeCity.vue')
         }
       ]
     },
