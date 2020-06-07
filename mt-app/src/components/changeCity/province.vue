@@ -10,6 +10,28 @@
         @change_active="changeProvinceActive"
         @change="changeProvince"
         />
+        <mt-select
+        :list="cityList"
+        title="城市"
+        :value="city"
+        chooseClass="city"
+        :showWrapperActive="cityActive"
+        @change_active="changeCityActive"
+        @change="changeCity"
+        :disabled="disabledCity"
+        />
+        <span>直接搜索:</span>
+        <el-select
+        v-model="searchWord"
+        filterable
+        remote
+        reserve-keyword
+        placeholder="请输入关键词"
+        :remote-method="remoteMethod"
+        :loading="loading"
+        >
+        <el-option v-for="item in searchList" :key="item" :label="item" :value="item"></el-option>
+        </el-select>
     </div>
 </template>
 <script>
@@ -18,7 +40,16 @@ import api from '@/api/index.js';
 export default {
     data(){
         return {
-            provinceList: []
+            provinceList: [],
+            cityActive: false,
+            provinceActive: false,
+            province: '省份',
+            cityList: ["哈尔滨", "佳木斯", "牡丹江", "鹤岗"],
+            city: "城市",
+            searchList: ["哈尔滨", "佳木斯", "牡丹江", "鹤岗"],
+            searchWord: '',
+            loading: false,
+            disabledCity: true,
         }
     },
     created(){
@@ -57,6 +88,10 @@ export default {
             this.$store.dispatch('setPosition', item);
             this.$router.push({name: 'index'})
         },
+        remoteMethod(val) {
+        // 请求直接搜索的后端接口
+        console.log(document.cookie, localStorage)
+        }
     }
 }
 </script>

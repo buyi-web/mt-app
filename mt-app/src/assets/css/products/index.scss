@@ -254,14 +254,17 @@
       .tab {
         position: relative;
 
-        dt {
+        h4 {
+          font-weight: normal;
           font-size: 14px;
           line-height: 24px;
           &.select-title {
             color: #ccc;
           }
         }
-
+        span{
+          line-height: 20px;
+        }
         dd {
           &:before {
             content: ' ';
